@@ -1,0 +1,21 @@
+LIBRARY
+; file compression library
+
+EXPORTS
+	bgzf_compress
+	bgzf_decompress
+	GetVersion
+	QuickLzCompress
+	QuickLzDecompress
+	qlz_size_decompressed
+	ZSTD_compress
+	ZSTD_decompress
+	ZSTD_getDecompressedSize
+	HasAvx
+	snappy_compress
+	snappy_uncompress
+	snappy_max_compressed_length
+	snappy_uncompressed_length
+	LZ4_compress_default
+	LZ4_decompress_safe
+	LZ4_compressBound
