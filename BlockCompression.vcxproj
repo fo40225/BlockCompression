@@ -31,12 +31,16 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <ClCompile Include="htslib\win32\bgzf_decompress.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="htslib\win32\gettimeofday.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="htslib\win32\usleep.c">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="cpu\CpuSupport.c" />
     <ClCompile Include="lz4\lib\lz4.c">

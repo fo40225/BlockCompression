@@ -206,6 +206,9 @@
     <ClCompile Include="cpu\CpuSupport.c">
       <Filter>cpu</Filter>
     </ClCompile>
+    <ClCompile Include="htslib\win32\bgzf_decompress.c">
+      <Filter>htslib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="BlockCompression.def">
