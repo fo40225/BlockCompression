@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
@@ -13,233 +9,212 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="zlib-ng">
+      <UniqueIdentifier>{ed994317-2b93-44a8-897e-564b57192f2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zstd">
+      <UniqueIdentifier>{eb8da6f6-a187-41b0-8cda-492f03f9d7db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QuickLZ">
+      <UniqueIdentifier>{0e5a3912-fe16-4c28-a5cd-cde934403bef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="snappy">
+      <UniqueIdentifier>{ffc7ab09-9627-4e67-88e5-c74f3a81fd6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lz4">
+      <UniqueIdentifier>{93c71b72-ec7a-4ea2-b891-3155b8a8ba2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="htslib">
+      <UniqueIdentifier>{29cad2be-9880-4c0a-ab33-267682914bcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pthreads">
+      <UniqueIdentifier>{ab166902-2150-45a3-ab96-373f4755648d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpu">
+      <UniqueIdentifier>{c51c7258-92e0-4c34-b629-5a4c901e4d0d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="htslib\bgzf.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="htslib\hfile.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="zlib-ng\adler32.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\crc32.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\deflate.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\deflate_fast.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\deflate_medium.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\deflate_slow.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\match.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\inffast.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\inflate.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\inftrees.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\trees.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\zutil.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\arch\x86\x86.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\arch\x86\fill_window_sse.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\arch\x86\insert_string_sse.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zlib-ng\arch\x86\crc_folding.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="illumina\BlockGZipUtils.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\compress\zstd_compress.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\decompress\zstd_decompress.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\common\entropy_common.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\common\fse_decompress.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\common\xxhash.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\common\zstd_common.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\compress\fse_compress.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\compress\huf_compress.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\decompress\huf_decompress.c">
-      <Filter>Source Files</Filter>
+      <Filter>zlib-ng</Filter>
     </ClCompile>
     <ClCompile Include="zlib-ng\compress.c">
-      <Filter>Source Files</Filter>
+      <Filter>zlib-ng</Filter>
     </ClCompile>
-    <ClCompile Include="zlib-ng\functable.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="zlib-ng\arch\x86\crc_folding.c">
+      <Filter>zlib-ng</Filter>
     </ClCompile>
     <ClCompile Include="zlib-ng\arch\x86\crc_pclmulqdq.c">
-      <Filter>Source Files</Filter>
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\crc32.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\deflate.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\arch\x86\deflate_quick.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\arch\x86\fill_window_sse.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\functable.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\infback.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\inffast.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\inflate.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\inftrees.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\arch\x86\insert_string_sse.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\match.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\trees.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\uncompr.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\arch\x86\x86.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\zutil.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\deflate_fast.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\deflate_medium.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib-ng\deflate_slow.c">
+      <Filter>zlib-ng</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\common\entropy_common.c">
+      <Filter>zstd</Filter>
     </ClCompile>
     <ClCompile Include="zstd\lib\common\error_private.c">
-      <Filter>Source Files</Filter>
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\common\fse_decompress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\common\pool.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\common\threading.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\common\zstd_common.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\decompress\huf_decompress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\decompress\zstd_decompress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\compress\fse_compress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\compress\huf_compress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\compress\zstd_compress.c">
+      <Filter>zstd</Filter>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstd_double_fast.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\compress\zstd_lazy.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="zstd\lib\compress\zstd_ldm.c">
-      <Filter>Source Files</Filter>
+      <Filter>zstd</Filter>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstd_fast.c">
-      <Filter>Source Files</Filter>
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\compress\zstd_lazy.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\compress\zstd_ldm.c">
+      <Filter>zstd</Filter>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstd_opt.c">
-      <Filter>Source Files</Filter>
+      <Filter>zstd</Filter>
     </ClCompile>
-    <ClCompile Include="pthreads-w32\pthread.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="zstd\lib\compress\zstdmt_compress.c">
+      <Filter>zstd</Filter>
     </ClCompile>
     <ClCompile Include="quicklz\quicklz.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="htslib\thread_pool.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="htslib\gettimeofday.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="htslib\cram\pooled_alloc.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="htslib\hts.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="illumina\CpuSupport.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="snappy\snappy.cc">
-      <Filter>Source Files</Filter>
+      <Filter>QuickLZ</Filter>
     </ClCompile>
     <ClCompile Include="snappy\snappy-c.cc">
-      <Filter>Source Files</Filter>
+      <Filter>snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="snappy\snappy.cc">
+      <Filter>snappy</Filter>
     </ClCompile>
     <ClCompile Include="snappy\snappy-sinksource.cc">
-      <Filter>Source Files</Filter>
+      <Filter>snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="snappy\snappy-stubs-internal.cc">
+      <Filter>snappy</Filter>
     </ClCompile>
     <ClCompile Include="lz4\lib\lz4.c">
-      <Filter>Source Files</Filter>
+      <Filter>lz4</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="htslib\htslib\bgzf.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="htslib\htslib\hfile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\crc32.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\deflate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\gzguts.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\inffast.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\inffixed.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\inflate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\inftrees.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\trees.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\zconf.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\zlib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib-ng\zutil.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="illumina\BlockGZipUtils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="illumina\cross_platform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zstd\lib\zstd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="quicklz\quicklz.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="htslib\version.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="htslib\htslib\gettimeofday.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="htslib\cram\pooled_alloc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="illumina\CpuSupport.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="snappy\snappy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="snappy\snappy-c.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="snappy\snappy-sinksource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="lz4\lib\lz4.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="lz4\lib\lz4frame.c">
+      <Filter>lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4\lib\lz4hc.c">
+      <Filter>lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4\lib\xxhash.c">
+      <Filter>lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="pthreads-w32\pthread.c">
+      <Filter>pthreads</Filter>
+    </ClCompile>
+    <ClCompile Include="htslib\bgzf.c">
+      <Filter>htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="htslib\hfile.c">
+      <Filter>htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="htslib\hts.c">
+      <Filter>htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="htslib\thread_pool.c">
+      <Filter>htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="htslib\cram\pooled_alloc.c">
+      <Filter>htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="htslib\win32\gettimeofday.c">
+      <Filter>htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="htslib\win32\usleep.c">
+      <Filter>htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\CpuSupport.c">
+      <Filter>cpu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="BlockCompression.def">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="htslib\win32\cross_platform.h">
+      <Filter>htslib</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
