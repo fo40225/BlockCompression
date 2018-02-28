@@ -4,9 +4,6 @@
 [submodule "zstd"]
 	path = zstd
 	url = https://github.com/MichaelStromberg/zstd.git
-[submodule "htslib"]
-	path = htslib
-	url = https://github.com/MichaelStromberg/htslib.git
 [submodule "lz4"]
 	path = lz4
 	url = https://github.com/MichaelStromberg/lz4.git
