@@ -10,8 +10,8 @@ public:
 	double GetElapsedSeconds() const;
 
 	static double GetSpeed(int numBytes, double numSeconds) { return numBytes / numSeconds; }
-	static std::string ConvertElapsedTime(double numSeconds);
 	static std::string ConvertSpeed(double speed);
+	static std::string ConvertTime(double numSeconds);
 
 private:
 	int64_t _startTime;

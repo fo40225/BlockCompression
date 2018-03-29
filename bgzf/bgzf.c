@@ -1,6 +1,7 @@
 #include "bgzf.h"
 #include <stdint.h>
 #include <zlib.h>
+#include <memory.h>
 
 #define BLOCK_HEADER_LENGTH 18
 #define BLOCK_FOOTER_LENGTH 8

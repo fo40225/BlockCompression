@@ -12,7 +12,7 @@ public:
 	void Load(void);
 	void Compress(const CompressionAlgorithm* pAlgorithm, TimingResult& result);
 	void Decompress(const CompressionAlgorithm* pAlgorithm, TimingResult& result);
-	void Verify(TimingResult& result);
+	void Verify();
 
 private:
 	std::string _inputPath;

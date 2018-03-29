@@ -1,5 +1,6 @@
 #include "Runner.h"
 #include <iostream>
+#include "BenchmarkStatistics.h"
 
 using namespace std;
 
@@ -12,8 +13,10 @@ Runner::~Runner() {}
 
 vector<TimingResult> Runner::EvaluateAlgorithm(CompressionData& data, const CompressionAlgorithm* pAlgorithm) {
 
-	cout << pAlgorithm->GetDescription() << endl;
-	vector<TimingResult> results(_numReplicates);
+	cout << pAlgorithm->GetDescription() << " -" << pAlgorithm->GetCompressionLevel() << endl;
+
+	vector<TimingResult> results;
+	results.reserve(_numReplicates);
 
 	for (int i = 0; i < _numReplicates; i++) {
 
@@ -21,22 +24,25 @@ vector<TimingResult> Runner::EvaluateAlgorithm(CompressionData& data, const Comp
 		TimingResult result;
 		data.Compress(pAlgorithm, result);
 		data.Decompress(pAlgorithm, result);
-		data.Verify(result);
+		data.Verify();
 		results.push_back(result);
 		cout << endl;
 	}
-
-	cout << "Finished." << endl;
-	exit(1);
 
 	return results;
 }
 
 void Runner::Execute(CompressionData& data) {
 
+	BenchmarkStatistics stats;
+
 	for (auto it = _algorithms.begin(); it != _algorithms.end(); ++it)
 	{
 		CompressionAlgorithm* pAlgorithm = *it;
-		EvaluateAlgorithm(data, pAlgorithm);
+		auto timingResults = EvaluateAlgorithm(data, pAlgorithm);
+		stats.AddTimingData(pAlgorithm->GetDescription(), pAlgorithm->GetCompressionLevel(), pAlgorithm->GetBlockSize(), timingResults);
 	}
+
+	stats.DisplayHeader();
+	stats.Display();
 }

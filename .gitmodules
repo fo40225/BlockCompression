@@ -16,6 +16,3 @@
 [submodule "quicklz"]
 	path = quicklz
 	url = https://github.com/MichaelStromberg/quicklz.git
-[submodule "pthreads-w32"]
-	path = pthreads-w32
-	url = https://github.com/MichaelStromberg/pthreads-w32.git

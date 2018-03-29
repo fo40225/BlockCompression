@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlockCompression", "BlockCompression.vcxproj", "{72CF023A-C2A0-4EB9-8517-FECC9353AFAE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestBlockCompression", "TestBlockCompression\TestBlockCompression.vcxproj", "{CEA5E2C0-F987-4012-8170-2EE8C892A5CB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RunBenchmark", "RunBenchmark\RunBenchmark.vcxproj", "{F19019F7-0659-43D8-A92C-991AE0B52526}"
 	ProjectSection(ProjectDependencies) = postProject
 		{72CF023A-C2A0-4EB9-8517-FECC9353AFAE} = {72CF023A-C2A0-4EB9-8517-FECC9353AFAE}
 	EndProjectSection
@@ -13,23 +13,17 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{72CF023A-C2A0-4EB9-8517-FECC9353AFAE}.Debug|x64.ActiveCfg = Debug|x64
 		{72CF023A-C2A0-4EB9-8517-FECC9353AFAE}.Debug|x64.Build.0 = Debug|x64
-		{72CF023A-C2A0-4EB9-8517-FECC9353AFAE}.Debug|x86.ActiveCfg = Debug|x64
 		{72CF023A-C2A0-4EB9-8517-FECC9353AFAE}.Release|x64.ActiveCfg = Release|x64
 		{72CF023A-C2A0-4EB9-8517-FECC9353AFAE}.Release|x64.Build.0 = Release|x64
-		{72CF023A-C2A0-4EB9-8517-FECC9353AFAE}.Release|x86.ActiveCfg = Release|x64
-		{CEA5E2C0-F987-4012-8170-2EE8C892A5CB}.Debug|x64.ActiveCfg = Debug|x64
-		{CEA5E2C0-F987-4012-8170-2EE8C892A5CB}.Debug|x64.Build.0 = Debug|x64
-		{CEA5E2C0-F987-4012-8170-2EE8C892A5CB}.Debug|x86.ActiveCfg = Debug|x64
-		{CEA5E2C0-F987-4012-8170-2EE8C892A5CB}.Release|x64.ActiveCfg = Release|x64
-		{CEA5E2C0-F987-4012-8170-2EE8C892A5CB}.Release|x64.Build.0 = Release|x64
-		{CEA5E2C0-F987-4012-8170-2EE8C892A5CB}.Release|x86.ActiveCfg = Release|x64
+		{F19019F7-0659-43D8-A92C-991AE0B52526}.Debug|x64.ActiveCfg = Debug|x64
+		{F19019F7-0659-43D8-A92C-991AE0B52526}.Debug|x64.Build.0 = Debug|x64
+		{F19019F7-0659-43D8-A92C-991AE0B52526}.Release|x64.ActiveCfg = Release|x64
+		{F19019F7-0659-43D8-A92C-991AE0B52526}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

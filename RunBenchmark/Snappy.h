@@ -3,18 +3,17 @@
 #include "CompressionAlgorithm.h"
 #include <sstream>
 
-class ZlibNextGen : public CompressionAlgorithm {
+class Snappy : public CompressionAlgorithm {
 public:
-	ZlibNextGen(int compressionLevel, int blockSize);
-	~ZlibNextGen();
+	Snappy(int blockSize);
+	~Snappy();
 	int Compress(const char* source, const int sourceLen, const char* destination, const int destinationLen) const;
 	int Decompress(const char* source, const int sourceLen, const char* destination, const int destinationLen) const;
 	int GetBlockSize(void) const { return _blockSize; }
-	int GetCompressionLevel(void) const { return _compressionLevel; }
-	std::string GetDescription(void) const { return "Zlib"; }
+	int GetCompressionLevel(void) const { return 1; }
+	std::string GetDescription(void) const { return "Snappy"; }
 
 private:
 	int _blockSize;
-	int _compressionLevel;
 };
 

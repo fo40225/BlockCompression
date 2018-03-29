@@ -11,237 +11,209 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="htslib\bgzf.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="htslib\cram\pooled_alloc.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="htslib\hfile.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="htslib\hts.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="htslib\thread_pool.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="htslib\win32\bgzf_decompress.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="htslib\win32\gettimeofday.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="htslib\win32\usleep.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_STRUCT_TIMESPEC;LIGHTWEIGHT_BGZF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\htslib;$(ProjectDir)\htslib\htslib;$(ProjectDir)\htslib\win32;$(ProjectDir)\pthreads-w32;$(ProjectDir)\zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
     <ClCompile Include="cpu\CpuSupport.c" />
     <ClCompile Include="lz4\lib\lz4.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="lz4\lib\lz4frame.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="lz4\lib\lz4hc.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="lz4\lib\xxhash.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="pthreads-w32\pthread.c">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\pthreads-w32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_PTW32_CONFIG_H;PTW32_BUILD_INLINED;PTW32_STATIC_LIB;__CLEANUP_C;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\pthreads-w32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_PTW32_CONFIG_H;PTW32_BUILD_INLINED;PTW32_STATIC_LIB;__CLEANUP_C;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="quicklz\quicklz.c" />
     <ClCompile Include="snappy\snappy-c.cc">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="snappy\snappy-sinksource.cc">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="snappy\snappy-stubs-internal.cc">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="snappy\snappy.cc">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\adler32.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\arch\x86\crc_folding.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\arch\x86\crc_pclmulqdq.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\arch\x86\deflate_quick.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\arch\x86\fill_window_sse.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\arch\x86\insert_string_sse.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\arch\x86\x86.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\compress.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\crc32.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\deflate.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\deflate_fast.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\deflate_medium.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\deflate_slow.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\functable.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\infback.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\inffast.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\inflate.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\inftrees.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\match.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\trees.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\uncompr.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zlib-ng\zutil.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\common\entropy_common.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\common\error_private.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\common\fse_decompress.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\common\pool.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\common\threading.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\common\zstd_common.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\fse_compress.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\huf_compress.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstdmt_compress.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstd_compress.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstd_double_fast.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstd_fast.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstd_lazy.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstd_ldm.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\compress\zstd_opt.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\decompress\huf_decompress.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="zstd\lib\decompress\zstd_decompress.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="BlockCompression.def" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="htslib\win32\cross_platform.h" />
+    <ClCompile Include="bgzf\bgzf.c">
+      <AdditionalIncludeDirectories>$(ProjectDir)zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="bgzf\bgzf.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{72CF023A-C2A0-4EB9-8517-FECC9353AFAE}</ProjectGuid>
@@ -255,7 +227,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -284,12 +256,9 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAs>CompileAsC</CompileAs>
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
     </ClCompile>
@@ -303,16 +272,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <CompileAs>CompileAsC</CompileAs>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
     </ClCompile>

@@ -4,10 +4,14 @@ LIBRARY
 EXPORTS
 	bgzf_compress
 	bgzf_decompress
-	QuickLzCompress
-	QuickLzDecompress
-	qlz_size_decompressed
+	HasAvx
 	ZSTD_compress
 	ZSTD_decompress
 	ZSTD_getDecompressedSize
-	HasAvx
+	QuickLzCompress
+	QuickLzDecompress
+	qlz_size_decompressed
+	snappy_compress
+	snappy_uncompress
+	LZ4_compress_fast
+	LZ4_decompress_safe
