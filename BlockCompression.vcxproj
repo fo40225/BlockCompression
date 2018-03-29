@@ -24,10 +24,6 @@
     <ClCompile Include="lz4\lib\xxhash.c">
       <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="pthreads-w32\pthread.c">
-      <AdditionalIncludeDirectories>$(ProjectDir)\pthreads-w32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_PTW32_CONFIG_H;PTW32_BUILD_INLINED;PTW32_STATIC_LIB;__CLEANUP_C;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
     <ClCompile Include="quicklz\quicklz.c" />
     <ClCompile Include="snappy\snappy-c.cc">
       <CompileAs>CompileAsCpp</CompileAs>
@@ -214,6 +210,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="bgzf\bgzf.h" />
+    <ClInclude Include="zlib-ng\zconf.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{72CF023A-C2A0-4EB9-8517-FECC9353AFAE}</ProjectGuid>

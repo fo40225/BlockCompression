@@ -24,9 +24,6 @@
     <Filter Include="lz4">
       <UniqueIdentifier>{93c71b72-ec7a-4ea2-b891-3155b8a8ba2e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="pthreads">
-      <UniqueIdentifier>{ab166902-2150-45a3-ab96-373f4755648d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="cpu">
       <UniqueIdentifier>{c51c7258-92e0-4c34-b629-5a4c901e4d0d}</UniqueIdentifier>
     </Filter>
@@ -179,9 +176,6 @@
     <ClCompile Include="lz4\lib\xxhash.c">
       <Filter>lz4</Filter>
     </ClCompile>
-    <ClCompile Include="pthreads-w32\pthread.c">
-      <Filter>pthreads</Filter>
-    </ClCompile>
     <ClCompile Include="cpu\CpuSupport.c">
       <Filter>cpu</Filter>
     </ClCompile>
@@ -197,6 +191,9 @@
   <ItemGroup>
     <ClInclude Include="bgzf\bgzf.h">
       <Filter>bgzf</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib-ng\zconf.h">
+      <Filter>zlib-ng</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

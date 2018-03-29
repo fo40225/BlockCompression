@@ -78,7 +78,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)cpu;$(SolutionDir)bgzf;$(SolutionDir)zlib-ng;$(SolutionDir)zstd\lib;$(SolutionDir)quicklz;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)cpu;$(SolutionDir)bgzf;$(SolutionDir)zlib-ng;$(SolutionDir)zstd\lib;$(SolutionDir)quicklz;$(SolutionDir)snappy;$(SolutionDir)lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
