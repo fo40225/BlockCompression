@@ -66,7 +66,7 @@ ZLIB_OBJS=$(addprefix obj/,$(notdir $(ZLIB_SOURCES:.c=.o)))
 ZSTD_SOURCES=$(ZSTD_DIR)/lib/common/entropy_common.c $(ZSTD_DIR)/lib/common/error_private.c $(ZSTD_DIR)/lib/common/fse_decompress.c $(ZSTD_DIR)/lib/common/pool.c $(ZSTD_DIR)/lib/common/threading.c $(ZSTD_DIR)/lib/common/zstd_common.c $(ZSTD_DIR)/lib/compress/fse_compress.c $(ZSTD_DIR)/lib/compress/huf_compress.c $(ZSTD_DIR)/lib/compress/zstdmt_compress.c $(ZSTD_DIR)/lib/compress/zstd_compress.c $(ZSTD_DIR)/lib/compress/zstd_double_fast.c $(ZSTD_DIR)/lib/compress/zstd_fast.c $(ZSTD_DIR)/lib/compress/zstd_lazy.c $(ZSTD_DIR)/lib/compress/zstd_ldm.c $(ZSTD_DIR)/lib/compress/zstd_opt.c $(ZSTD_DIR)/lib/decompress/huf_decompress.c $(ZSTD_DIR)/lib/decompress/zstd_decompress.c
 ZSTD_OBJS=$(addprefix obj/,$(notdir $(ZSTD_SOURCES:.c=.o)))
 
-BENCHMARK_SOURCES=$(BENCHMARK_DIR)/Benchmark.cpp $(BENCHMARK_DIR)/BenchmarkStatistics.cpp $(BENCHMARK_DIR)/CompressionData.cpp $(BENCHMARK_DIR)/LZ4Default.cpp $(BENCHMARK_DIR)/MemoryUtilities.cpp $(BENCHMARK_DIR)/QuickLzLevel3.cpp $(BENCHMARK_DIR)/RunBenchmark.cpp $(BENCHMARK_DIR)/Runner.cpp $(BENCHMARK_DIR)/Snappy.cpp $(BENCHMARK_DIR)/ZlibNextGen.cpp $(BENCHMARK_DIR)/Zstandard.cpp
+BENCHMARK_SOURCES=$(BENCHMARK_DIR)/Benchmark.cpp $(BENCHMARK_DIR)/BenchmarkStatistics.cpp $(BENCHMARK_DIR)/CompressionData.cpp $(BENCHMARK_DIR)/LZ4Default.cpp $(BENCHMARK_DIR)/MemoryUtilities.cpp $(BENCHMARK_DIR)/QuickLzLevel3.cpp $(BENCHMARK_DIR)/RunBenchmark.cpp $(BENCHMARK_DIR)/Runner.cpp $(BENCHMARK_DIR)/SnappyDefault.cpp $(BENCHMARK_DIR)/ZlibNextGen.cpp $(BENCHMARK_DIR)/Zstandard.cpp
 BENCHMARK_OBJS=$(addprefix obj/,$(notdir $(BENCHMARK_SOURCES:.cpp=.o)))
 
 all: $(SHAREDLIB) $(RUNBENCHMARK)

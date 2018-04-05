@@ -5,7 +5,7 @@
 #include "ZlibNextGen.h"
 #include "Zstandard.h"
 #include "QuickLzLevel3.h"
-#include "Snappy.h"
+#include "SnappyDefault.h"
 #include "LZ4Default.h"
 #include "Runner.h"
 #include "bgzf.h"

@@ -36,7 +36,7 @@
     <ClCompile Include="BenchmarkStatistics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Snappy.cpp">
+    <ClCompile Include="SnappyDefault.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Zstandard.cpp">
@@ -80,7 +80,7 @@
     <ClInclude Include="BenchmarkResult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Snappy.h">
+    <ClInclude Include="SnappyDefault.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Zstandard.h">

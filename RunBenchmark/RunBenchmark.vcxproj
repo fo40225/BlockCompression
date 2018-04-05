@@ -96,7 +96,7 @@
     <ClCompile Include="QuickLzLevel3.cpp" />
     <ClCompile Include="RunBenchmark.cpp" />
     <ClCompile Include="Runner.cpp" />
-    <ClCompile Include="Snappy.cpp" />
+    <ClCompile Include="SnappyDefault.cpp" />
     <ClCompile Include="ZlibNextGen.cpp" />
     <ClCompile Include="Zstandard.cpp" />
   </ItemGroup>
@@ -111,7 +111,7 @@
     <ClInclude Include="MemoryUtilities.h" />
     <ClInclude Include="QuickLzLevel3.h" />
     <ClInclude Include="Runner.h" />
-    <ClInclude Include="Snappy.h" />
+    <ClInclude Include="SnappyDefault.h" />
     <ClInclude Include="TimingResult.h" />
     <ClInclude Include="ZlibNextGen.h" />
     <ClInclude Include="Zstandard.h" />

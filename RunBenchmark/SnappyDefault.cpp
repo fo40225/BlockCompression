@@ -1,4 +1,4 @@
-#include "Snappy.h"
+#include "SnappyDefault.h"
 #include "snappy-c.h"
 
 using namespace std;
