@@ -7,9 +7,6 @@
 [submodule "lz4"]
 	path = lz4
 	url = https://github.com/MichaelStromberg/lz4.git
-[submodule "zlib"]
-	path = zlib
-	url = https://github.com/MichaelStromberg/zlib.git
 [submodule "snappy"]
 	path = snappy
 	url = https://github.com/MichaelStromberg/snappy.git
