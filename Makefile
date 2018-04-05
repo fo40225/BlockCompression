@@ -79,11 +79,11 @@ $(SHAREDLIB): $(BGZF_OBJS) $(CPU_OBJS) $(LZ4_OBJS) $(QUICKLZ_OBJS) $(SNAPPY_OBJS
 	@test -d $(OBJ_DIR) || mkdir $(OBJ_DIR)
 	@test -d $(BIN_DIR) || mkdir $(BIN_DIR)
 	@echo "- creating the shared library"
-	$(LDSHARED) $(CFLAGS) $(DEFINES) -o bin/$@ $(BGZF_OBJS) $(CPU_OBJS) $(LZ4_OBJS) $(QUICKLZ_OBJS) $(SNAPPY_OBJS) $(ZLIB_OBJS) $(ZSTD_OBJS) -lc $(LDFLAGS)
+	@$(LDSHARED) $(CFLAGS) $(DEFINES) -o bin/$@ $(BGZF_OBJS) $(CPU_OBJS) $(LZ4_OBJS) $(QUICKLZ_OBJS) $(SNAPPY_OBJS) $(ZLIB_OBJS) $(ZSTD_OBJS) -lc $(LDFLAGS)
 
 $(RUNBENCHMARK): $(SHAREDLIB) $(BENCHMARK_OBJS)
 	@echo "- creating RunBenchmark"
-	$(CC) $(CFLAGS) $(MARCH) $(BENCHMARK_INCLUDE) -o $(RUNBENCHMARK) $(BENCHMARK_OBJS) $(LIBS) -lstdc++ -lm -lpthread
+	@$(CC) $(CFLAGS) $(MARCH) $(BENCHMARK_INCLUDE) -o $(RUNBENCHMARK) $(BENCHMARK_OBJS) $(LIBS) -lstdc++ -lm -lpthread
 
 obj/%.o : $(BGZF_DIR)/%.c
 	@mkdir -p $(dir $@)
