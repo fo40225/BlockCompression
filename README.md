@@ -2,8 +2,8 @@
 
 This library contains high-performance versions of the following compression algorithms:
 
-* zlib
-* QuickLZ
+* zlib-ng
+* QuickLZ (level 3)
 * Zstd
 * snappy
 * lz4
