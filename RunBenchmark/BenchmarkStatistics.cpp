@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <algorithm>
+#include <cmath>
 #include "Benchmark.h"
 
 using namespace std;

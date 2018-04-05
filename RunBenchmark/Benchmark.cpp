@@ -1,30 +1,49 @@
 #include "Benchmark.h"
 #include <sstream>
 #include <iomanip>
-#include "Windows.h"
 #include "MemoryUtilities.h"
+
+#ifdef _MSC_VER
+#include "Windows.h"
+#else
+#include <time.h>
+#endif
 
 using namespace std;
 
 #define NumSecondsInHour   3600.0
 #define NumSecondsInMinute   60.0
+#define BILLION               1E9
 
 Benchmark::Benchmark() {
+#ifdef _MSC_VER
 	LARGE_INTEGER startingTime;
 	LARGE_INTEGER frequency;
 	QueryPerformanceFrequency(&frequency);
 	QueryPerformanceCounter(&startingTime);
 	_startTime = startingTime.QuadPart;
 	_frequency = frequency.QuadPart;
+#else
+	struct timespec now;	
+	clock_gettime(CLOCK_MONOTONIC, &now);
+	_startTime = now.tv_sec;
+	_frequency = now.tv_nsec;
+#endif	
 }
 
 Benchmark::~Benchmark() {}
 
 double Benchmark::GetElapsedSeconds(void) const {
+#ifdef _MSC_VER	
 	LARGE_INTEGER endingTime;
 	QueryPerformanceCounter(&endingTime);
 	int64_t elapsedTicks = endingTime.QuadPart - _startTime;
 	return (double)elapsedTicks / (double)_frequency;
+#else
+	struct timespec now;
+	clock_gettime(CLOCK_MONOTONIC, &now);	
+	return (now.tv_sec - _startTime) + (now.tv_nsec - _frequency) / BILLION;
+#endif	
 }
 
 string Benchmark::ConvertTime(double numSeconds) {

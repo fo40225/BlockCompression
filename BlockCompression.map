@@ -2,6 +2,7 @@ VER_1 {
     global:
         bgzf_compress;
         bgzf_decompress;
+	HasAvx;
         GetVersion;
         QuickLzCompress;
         QuickLzDecompress;
@@ -9,6 +10,10 @@ VER_1 {
         ZSTD_compress;
         ZSTD_getDecompressedSize;
         ZSTD_decompress;
+	snappy_compress;
+	snappy_uncompress;
+	LZ4_compress_fast;
+	LZ4_decompress_safe;
     local:
         *;
 };
