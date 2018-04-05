@@ -10,17 +10,17 @@ This library contains high-performance versions of the following compression alg
 
 ## Building
 
-### Windows
+### Windows (Windows 10)
 
 Compile using BlockCompression.sln in Visual Studio 2017
 
-### Linux
+### Linux (Ubuntu 17.10)
 
 ```
 make -j
 ```
 
-### Mac OS X
+### Mac OS X (High Sierra)
 
 ```
 make -j -f Makefile.MacOSX
