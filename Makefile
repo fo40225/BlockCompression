@@ -40,6 +40,7 @@ LIBS=-L$(TOP_DIR)/$(BIN_DIR) -Wl,-rpath,$(TOP_DIR)/$(BIN_DIR) -lBlockCompression
 CC=gcc
 CPP=g++
 CFLAGS=-O3 -fPIC
+CPPFLAGS=
 MARCH=-mavx
 LDFLAGS=-Wl,-Bstatic -static-libgcc -Wl,-Bdynamic
 LDSHARED=gcc -shared -Wl,-soname,$(SHAREDLIB),--version-script,BlockCompression.map
@@ -83,7 +84,7 @@ $(SHAREDLIB): $(BGZF_OBJS) $(CPU_OBJS) $(LZ4_OBJS) $(QUICKLZ_OBJS) $(SNAPPY_OBJS
 
 $(RUNBENCHMARK): $(SHAREDLIB) $(BENCHMARK_OBJS)
 	@echo "- creating RunBenchmark"
-	@$(CC) $(CFLAGS) $(MARCH) $(BENCHMARK_INCLUDE) -o $(RUNBENCHMARK) $(BENCHMARK_OBJS) $(LIBS) -lstdc++ -lm -lpthread
+	@$(CPP) $(CFLAGS) $(CPPFLAGS) $(MARCH) $(BENCHMARK_INCLUDE) -o $(RUNBENCHMARK) $(BENCHMARK_OBJS) $(LIBS) -lstdc++ -lm -lpthread
 
 obj/%.o : $(BGZF_DIR)/%.c
 	@mkdir -p $(dir $@)
@@ -108,7 +109,7 @@ obj/%.o : $(QUICKLZ_DIR)/%.c
 obj/%.o : $(SNAPPY_DIR)/%.cc
 	@mkdir -p $(dir $@)
 	@echo "- compiling" $(*F).cc
-	@$(CC) $(CFLAGS) $(MARCH) $(SNAPPY_INCLUDE) $(SNAPPY_DEFINES) -c $< -o $@
+	@$(CPP) $(CFLAGS) $(CPPFLAGS) $(MARCH) $(SNAPPY_INCLUDE) $(SNAPPY_DEFINES) -c $< -o $@
 
 obj/%.o : $(ZSTD_DIR)/lib/common/%.c
 	@mkdir -p $(dir $@)
@@ -143,4 +144,4 @@ obj/crc_folding.o : $(ZLIB_DIR)/arch/x86/crc_folding.c
 obj/%.o : $(BENCHMARK_DIR)/%.cpp
 	@mkdir -p $(dir $@)
 	@echo "- compiling" $(*F).cpp
-	@$(CPP) $(CFLAGS) $(MARCH) $(BENCHMARK_INCLUDE) -c $< -o $@
+	@$(CPP) $(CFLAGS) $(CPPFLAGS) $(MARCH) $(BENCHMARK_INCLUDE) -c $< -o $@

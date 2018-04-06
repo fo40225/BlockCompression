@@ -11,7 +11,7 @@ Snappy::~Snappy() {}
 
 int Snappy::Compress(const char* source, const int sourceLen, const char* destination, const int destinationLen) const {
 
-	size_t numCompressedBytes;
+	size_t numCompressedBytes = destinationLen;
 	snappy_status status = snappy_compress(source, sourceLen, (char*)destination, &numCompressedBytes);
 
 	if (status != SNAPPY_OK) {
@@ -24,7 +24,7 @@ int Snappy::Compress(const char* source, const int sourceLen, const char* destin
 
 int Snappy::Decompress(const char* source, const int sourceLen, const char* destination, const int destinationLen) const {
 	
-	size_t numUncompressedBytes;	
+	size_t numUncompressedBytes = destinationLen;
 	snappy_status status = snappy_uncompress(source, sourceLen, (char*)destination, &numUncompressedBytes);
 
 	if (status != SNAPPY_OK) {
