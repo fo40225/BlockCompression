@@ -90,7 +90,7 @@ LZ4       | 18 |    0.77 s |      2.16 | 604.0 MB/s |  1.679 GB/s |  3.355 |  0.
 LZ4       | 19 |    0.77 s |      2.15 | 605.9 MB/s |  1.691 GB/s |  3.369 |  0.730 |      1 |     52 |
 LZ4       | 20 |    0.77 s |      2.11 | 600.4 MB/s |  1.698 GB/s |  3.349 |  0.716 |      3 |     53 |
 
-#### no AVX, no PGO
+#### no AVX (no march), no PGO
 
 Algorithm | CL | TotalTime | CompRatio |  CompSpeed | DecompSpeed | Speed% | Ratio% | SpRank | CrRank |
 ---------:|---:|----------:|----------:|-----------:|------------:|-------:|-------:|-------:|-------:|
