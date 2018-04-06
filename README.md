@@ -28,9 +28,9 @@ make -j -f Makefile.MacOSX
 
 ## Benchmarking
 
-Intel Core i7-2600K CPU @ 3.40GHz
-Ubuntu 17.10
-using Mother.vcf
+* Intel Core i7-2600K CPU @ 3.40GHz
+* Ubuntu 17.10
+* using Mother.vcf
 
 #### AVX, no PGO
 
