@@ -41,7 +41,7 @@ CC=gcc
 CPP=g++
 CFLAGS=-O3 -fPIC
 CPPFLAGS=
-MARCH=-mavx
+MARCH=-march=native
 LDFLAGS=-Wl,-Bstatic -static-libgcc -Wl,-Bdynamic
 LDSHARED=gcc -shared -Wl,-soname,$(SHAREDLIB),--version-script,BlockCompression.map
 
