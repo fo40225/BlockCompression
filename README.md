@@ -47,6 +47,8 @@ actually hurt performance.
 Profile-guided optimization (PGO) improved decompression speed by an average of 6.28% (range: -1.5% - 15.5%).
 PGO has a slightly detrimental effect on compression speed by and average of -0.95% (range: -6.7% - 6.7%).
 
+We also evaluated PGO code produced by Clang/LLVM and gcc/g++. gcc produced slightly faster code.
+
 ### Benchmark
 
 Native optimization (no AVX), PGO, using SIMD improvements for Zlib
