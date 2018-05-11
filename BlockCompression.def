@@ -4,10 +4,15 @@ LIBRARY
 EXPORTS
 	bgzf_compress
 	bgzf_decompress
-	HasAvx
 	ZSTD_compress
 	ZSTD_decompress
 	ZSTD_getDecompressedSize
+	ZSTD_createCDict
+	ZSTD_createDDict
+	ZSTD_createCCtx
+	ZSTD_createDCtx
+	ZSTD_compress_usingCDict
+	ZSTD_decompress_usingDDict
 	QuickLzCompress
 	QuickLzDecompress
 	qlz_size_decompressed
@@ -15,3 +20,4 @@ EXPORTS
 	snappy_uncompress
 	LZ4_compress_fast
 	LZ4_decompress_safe
+	get_library_id

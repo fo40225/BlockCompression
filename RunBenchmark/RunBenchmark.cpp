@@ -1,9 +1,10 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
-#include "CpuSupport.h"
 #include "ZlibNextGen.h"
 #include "Zstandard.h"
+#include "ZstandardDict.h"
 #include "QuickLzLevel3.h"
 #include "SnappyDefault.h"
 #include "LZ4Default.h"
@@ -12,15 +13,9 @@
 
 using namespace std;
 
-void ShowAvxStatus(void) {
-	if (HasAvx() == 1) cout << "This processor has AVX support." << endl;
-	else cout << "This processor DOES NOT HAVE AVX support." << endl;
-	cout << endl;
-}
-
 #define SA_BLOCK_SIZE 16777216
 
-vector<CompressionAlgorithm*> GetCompressionAlgorithms() {
+vector<CompressionAlgorithm*> GetCompressionAlgorithms(vector<char> dictBuffer) {
 
 	vector<CompressionAlgorithm*> algorithms;
 
@@ -30,6 +25,13 @@ vector<CompressionAlgorithm*> GetCompressionAlgorithms() {
 
 	for (int cl = 1; cl <= 22; cl++) {
 		algorithms.push_back(new Zstandard(cl, SA_BLOCK_SIZE));
+	}
+
+	char* pDict  = dictBuffer.data();
+	int dictSize = (int)dictBuffer.size();
+
+	for (int cl = 1; cl <= 22; cl++) {
+		algorithms.push_back(new ZstandardDict(cl, SA_BLOCK_SIZE, pDict, dictSize));
 	}
 
 	algorithms.push_back(new QuickLZ(SA_BLOCK_SIZE));
@@ -42,22 +44,36 @@ vector<CompressionAlgorithm*> GetCompressionAlgorithms() {
 	return algorithms;
 }
 
+vector<char> LoadDictionary(string dictPath) {
+
+	ifstream ifs(dictPath.c_str(), ios::binary | ios::ate);
+	ifstream::pos_type bufferSize = ifs.tellg();
+
+	vector<char> buffer(bufferSize);
+
+	ifs.seekg(0, ios::beg);
+	ifs.read(&buffer[0], bufferSize);
+	return buffer;
+}
+
 int main(int argc, char *argv[])
 {
-	if (argc != 2)
+	if (argc != 3)
 	{
-		printf("USAGE: %s <input_path>\n", argv[0]);
+		printf("USAGE: %s <input_path> <input_dict>\n", argv[0]);
 		exit(1);
 	}
 
-	ShowAvxStatus();
-
 	string inputPath = argv[1];
+	string dictPath  = argv[2];
+
 	CompressionData data(inputPath);
 	data.Load();
 
-	auto algorithms = GetCompressionAlgorithms();
-	const int numReplicates = 5;
+	auto dictBuffer = LoadDictionary(dictPath);
+
+	auto algorithms = GetCompressionAlgorithms(dictBuffer);
+	const int numReplicates = 2;
 
 	Runner runner(algorithms, numReplicates);
 	runner.Execute(data);

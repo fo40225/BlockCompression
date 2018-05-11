@@ -11,7 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpu\CpuSupport.c" />
     <ClCompile Include="lz4\lib\lz4.c">
       <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -45,6 +44,7 @@
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="utilities\get_library_id.c" />
     <ClCompile Include="zlib-ng\adler32.c">
       <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -210,6 +210,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="bgzf\bgzf.h" />
+    <ClInclude Include="utilities\get_library_id.h" />
     <ClInclude Include="zlib-ng\zconf.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

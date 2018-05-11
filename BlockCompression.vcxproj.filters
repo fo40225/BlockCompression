@@ -24,11 +24,11 @@
     <Filter Include="lz4">
       <UniqueIdentifier>{93c71b72-ec7a-4ea2-b891-3155b8a8ba2e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="cpu">
-      <UniqueIdentifier>{c51c7258-92e0-4c34-b629-5a4c901e4d0d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="bgzf">
       <UniqueIdentifier>{64b35fc3-f67a-412e-93be-86b636433675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utilities">
+      <UniqueIdentifier>{f0947f96-8490-48d6-98a6-2dc9a8de2dbe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -176,11 +176,11 @@
     <ClCompile Include="lz4\lib\xxhash.c">
       <Filter>lz4</Filter>
     </ClCompile>
-    <ClCompile Include="cpu\CpuSupport.c">
-      <Filter>cpu</Filter>
-    </ClCompile>
     <ClCompile Include="bgzf\bgzf.c">
       <Filter>bgzf</Filter>
+    </ClCompile>
+    <ClCompile Include="utilities\get_library_id.c">
+      <Filter>utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +194,9 @@
     </ClInclude>
     <ClInclude Include="zlib-ng\zconf.h">
       <Filter>zlib-ng</Filter>
+    </ClInclude>
+    <ClInclude Include="utilities\get_library_id.h">
+      <Filter>utilities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

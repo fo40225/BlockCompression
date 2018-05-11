@@ -4,8 +4,7 @@
 extern "C" {
 #endif
 
-	// returns true if this CPU has AVX support
-	int HasAvx();
+	int get_library_id(void);
 
 #ifdef __cplusplus
 }

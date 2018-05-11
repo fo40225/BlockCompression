@@ -48,6 +48,9 @@
     <ClCompile Include="LZ4Default.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ZstandardDict.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CompressionAlgorithm.h">
@@ -90,6 +93,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LZ4Default.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZstandardDict.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

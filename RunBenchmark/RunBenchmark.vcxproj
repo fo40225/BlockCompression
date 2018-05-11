@@ -99,6 +99,7 @@
     <ClCompile Include="SnappyDefault.cpp" />
     <ClCompile Include="ZlibNextGen.cpp" />
     <ClCompile Include="Zstandard.cpp" />
+    <ClCompile Include="ZstandardDict.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Benchmark.h" />
@@ -115,6 +116,7 @@
     <ClInclude Include="TimingResult.h" />
     <ClInclude Include="ZlibNextGen.h" />
     <ClInclude Include="Zstandard.h" />
+    <ClInclude Include="ZstandardDict.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
