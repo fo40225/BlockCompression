@@ -5,9 +5,6 @@
 #include "ZlibNextGen.h"
 #include "Zstandard.h"
 #include "ZstandardDict.h"
-#include "QuickLzLevel3.h"
-#include "SnappyDefault.h"
-#include "LZ4Default.h"
 #include "Runner.h"
 #include "bgzf.h"
 
@@ -32,13 +29,6 @@ vector<CompressionAlgorithm*> GetCompressionAlgorithms(vector<char> dictBuffer) 
 
 	for (int cl = 1; cl <= 22; cl++) {
 		algorithms.push_back(new ZstandardDict(cl, SA_BLOCK_SIZE, pDict, dictSize));
-	}
-
-	algorithms.push_back(new QuickLZ(SA_BLOCK_SIZE));
-	algorithms.push_back(new Snappy(SA_BLOCK_SIZE));
-
-	for (int cl = 1; cl <= 20; cl++) {
-		algorithms.push_back(new LZ4(cl, SA_BLOCK_SIZE));
 	}
 
 	return algorithms;

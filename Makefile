@@ -48,7 +48,7 @@ UTILITIES_OBJS=$(addprefix obj/,$(notdir $(UTILITIES_SOURCES:.c=.o)))
 ZLIB_SOURCES=$(ZLIB_DIR)/adler32.c $(ZLIB_DIR)/compress.c $(ZLIB_DIR)/crc32.c $(ZLIB_DIR)/deflate.c $(ZLIB_DIR)/deflate_fast.c $(ZLIB_DIR)/deflate_medium.c $(ZLIB_DIR)/deflate_slow.c $(ZLIB_DIR)/functable.c $(ZLIB_DIR)/infback.c $(ZLIB_DIR)/inffast.c $(ZLIB_DIR)/inflate.c $(ZLIB_DIR)/inftrees.c $(ZLIB_DIR)/match.c $(ZLIB_DIR)/trees.c $(ZLIB_DIR)/uncompr.c $(ZLIB_DIR)/zutil.c $(ZLIB_DIR)/arch/x86/x86.c $(ZLIB_DIR)/arch/x86/crc_folding.c $(ZLIB_DIR)/arch/x86/crc_pclmulqdq.c $(ZLIB_DIR)/arch/x86/deflate_quick.c $(ZLIB_DIR)/arch/x86/fill_window_sse.c $(ZLIB_DIR)/arch/x86/insert_string_sse.c
 ZLIB_OBJS=$(addprefix obj/,$(notdir $(ZLIB_SOURCES:.c=.o)))
 
-ZSTD_SOURCES=$(ZSTD_DIR)/lib/common/entropy_common.c $(ZSTD_DIR)/lib/common/error_private.c $(ZSTD_DIR)/lib/common/fse_decompress.c $(ZSTD_DIR)/lib/common/pool.c $(ZSTD_DIR)/lib/common/threading.c $(ZSTD_DIR)/lib/common/zstd_common.c $(ZSTD_DIR)/lib/compress/fse_compress.c $(ZSTD_DIR)/lib/compress/huf_compress.c $(ZSTD_DIR)/lib/compress/zstdmt_compress.c $(ZSTD_DIR)/lib/compress/zstd_compress.c $(ZSTD_DIR)/lib/compress/zstd_double_fast.c $(ZSTD_DIR)/lib/compress/zstd_fast.c $(ZSTD_DIR)/lib/compress/zstd_lazy.c $(ZSTD_DIR)/lib/compress/zstd_ldm.c $(ZSTD_DIR)/lib/compress/zstd_opt.c $(ZSTD_DIR)/lib/decompress/huf_decompress.c $(ZSTD_DIR)/lib/decompress/zstd_decompress.c
+ZSTD_SOURCES=$(ZSTD_DIR)/lib/common/entropy_common.c $(ZSTD_DIR)/lib/common/error_private.c $(ZSTD_DIR)/lib/common/fse_decompress.c $(ZSTD_DIR)/lib/common/pool.c $(ZSTD_DIR)/lib/common/threading.c $(ZSTD_DIR)/lib/common/zstd_common.c $(ZSTD_DIR)/lib/common/xxhash.c $(ZSTD_DIR)/lib/compress/fse_compress.c $(ZSTD_DIR)/lib/compress/huf_compress.c $(ZSTD_DIR)/lib/compress/zstdmt_compress.c $(ZSTD_DIR)/lib/compress/zstd_compress.c $(ZSTD_DIR)/lib/compress/zstd_double_fast.c $(ZSTD_DIR)/lib/compress/zstd_fast.c $(ZSTD_DIR)/lib/compress/zstd_lazy.c $(ZSTD_DIR)/lib/compress/zstd_ldm.c $(ZSTD_DIR)/lib/compress/zstd_opt.c $(ZSTD_DIR)/lib/decompress/huf_decompress.c $(ZSTD_DIR)/lib/decompress/zstd_decompress.c
 ZSTD_OBJS=$(addprefix obj/,$(notdir $(ZSTD_SOURCES:.c=.o)))
 
 BENCHMARK_SOURCES=$(BENCHMARK_DIR)/Benchmark.cpp $(BENCHMARK_DIR)/BenchmarkStatistics.cpp $(BENCHMARK_DIR)/CompressionData.cpp  $(BENCHMARK_DIR)/MemoryUtilities.cpp $(BENCHMARK_DIR)/RunBenchmark.cpp $(BENCHMARK_DIR)/Runner.cpp $(BENCHMARK_DIR)/ZlibNextGen.cpp $(BENCHMARK_DIR)/Zstandard.cpp $(BENCHMARK_DIR)/ZstandardDict.cpp
@@ -68,7 +68,7 @@ $(SHAREDLIB): $(BGZF_OBJS) $(UTILITIES_OBJS) $(ZLIB_OBJS) $(ZSTD_OBJS)
 
 $(RUNBENCHMARK): $(SHAREDLIB) $(BENCHMARK_OBJS)
 	@echo "- creating RunBenchmark"
-	@$(CPP) $(CFLAGS) $(CPPFLAGS) $(MARCH) $(BENCHMARK_INCLUDE) -o $(RUNBENCHMARK) $(BENCHMARK_OBJS) $(LIBS) -lstdc++ -lm -lpthread
+	$(CPP) $(CFLAGS) $(CPPFLAGS) $(MARCH) $(BENCHMARK_INCLUDE) -o $(RUNBENCHMARK) $(BENCHMARK_OBJS) $(LIBS) -lstdc++ -lm -lpthread
 
 obj/%.o : $(BGZF_DIR)/%.c
 	@mkdir -p $(dir $@)

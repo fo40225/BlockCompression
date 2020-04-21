@@ -22,7 +22,6 @@ private:
 	void DisplayField(const std::string& field, const int fieldSize, const char leftSpace, const char rightSpace);
 	double CalculateWeissmanScore(double baselineCompressionRatio, double baselineSeconds, double compressionRatio, double seconds);
 	double GetTimeScalingFactor(void);
-	//bool OrderByDescendingDecompSpeed(BenchmarkResult i, BenchmarkResult j);
 	void SetMinFieldLengths(void);
 	void SetRankAndScale(void);
 	int _algorithmLen;
