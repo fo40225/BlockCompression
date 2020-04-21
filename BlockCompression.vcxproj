@@ -11,39 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lz4\lib\lz4.c">
-      <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="lz4\lib\lz4frame.c">
-      <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="lz4\lib\lz4hc.c">
-      <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="lz4\lib\xxhash.c">
-      <AdditionalIncludeDirectories>$(ProjectDir)\lz4\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="quicklz\quicklz.c" />
-    <ClCompile Include="snappy\snappy-c.cc">
-      <CompileAs>CompileAsCpp</CompileAs>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="snappy\snappy-sinksource.cc">
-      <CompileAs>CompileAsCpp</CompileAs>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="snappy\snappy-stubs-internal.cc">
-      <CompileAs>CompileAsCpp</CompileAs>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="snappy\snappy.cc">
-      <CompileAs>CompileAsCpp</CompileAs>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\snappy;$(ProjectDir)\snappy\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
     <ClCompile Include="utilities\get_library_id.c" />
     <ClCompile Include="zlib-ng\adler32.c">
       <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -153,6 +120,10 @@
       <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="zstd\lib\common\xxhash.c">
+      <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="zstd\lib\common\zstd_common.c">
       <PreprocessorDefinitions>ZSTD_LEGACY_SUPPORT=0;ZSTD_MULTITHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)\zstd\lib\common;$(ProjectDir)\zstd\lib\compress;$(ProjectDir)\zstd\lib\decompress;$(ProjectDir)\zstd\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -218,19 +189,19 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>BlockGZipCompression</RootNamespace>
     <ProjectName>BlockCompression</ProjectName>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>

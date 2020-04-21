@@ -13,11 +13,4 @@ EXPORTS
 	ZSTD_createDCtx
 	ZSTD_compress_usingCDict
 	ZSTD_decompress_usingDDict
-	QuickLzCompress
-	QuickLzDecompress
-	qlz_size_decompressed
-	snappy_compress
-	snappy_uncompress
-	LZ4_compress_fast
-	LZ4_decompress_safe
 	get_library_id

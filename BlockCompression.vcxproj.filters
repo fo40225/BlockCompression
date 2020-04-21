@@ -15,15 +15,6 @@
     <Filter Include="zstd">
       <UniqueIdentifier>{eb8da6f6-a187-41b0-8cda-492f03f9d7db}</UniqueIdentifier>
     </Filter>
-    <Filter Include="QuickLZ">
-      <UniqueIdentifier>{0e5a3912-fe16-4c28-a5cd-cde934403bef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="snappy">
-      <UniqueIdentifier>{ffc7ab09-9627-4e67-88e5-c74f3a81fd6e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="lz4">
-      <UniqueIdentifier>{93c71b72-ec7a-4ea2-b891-3155b8a8ba2e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="bgzf">
       <UniqueIdentifier>{64b35fc3-f67a-412e-93be-86b636433675}</UniqueIdentifier>
     </Filter>
@@ -149,38 +140,14 @@
     <ClCompile Include="zstd\lib\compress\zstdmt_compress.c">
       <Filter>zstd</Filter>
     </ClCompile>
-    <ClCompile Include="quicklz\quicklz.c">
-      <Filter>QuickLZ</Filter>
-    </ClCompile>
-    <ClCompile Include="snappy\snappy-c.cc">
-      <Filter>snappy</Filter>
-    </ClCompile>
-    <ClCompile Include="snappy\snappy.cc">
-      <Filter>snappy</Filter>
-    </ClCompile>
-    <ClCompile Include="snappy\snappy-sinksource.cc">
-      <Filter>snappy</Filter>
-    </ClCompile>
-    <ClCompile Include="snappy\snappy-stubs-internal.cc">
-      <Filter>snappy</Filter>
-    </ClCompile>
-    <ClCompile Include="lz4\lib\lz4.c">
-      <Filter>lz4</Filter>
-    </ClCompile>
-    <ClCompile Include="lz4\lib\lz4frame.c">
-      <Filter>lz4</Filter>
-    </ClCompile>
-    <ClCompile Include="lz4\lib\lz4hc.c">
-      <Filter>lz4</Filter>
-    </ClCompile>
-    <ClCompile Include="lz4\lib\xxhash.c">
-      <Filter>lz4</Filter>
-    </ClCompile>
     <ClCompile Include="bgzf\bgzf.c">
       <Filter>bgzf</Filter>
     </ClCompile>
     <ClCompile Include="utilities\get_library_id.c">
       <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="zstd\lib\common\xxhash.c">
+      <Filter>zstd</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

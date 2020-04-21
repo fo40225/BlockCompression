@@ -15,19 +15,19 @@
     <ProjectGuid>{F19019F7-0659-43D8-A92C-991AE0B52526}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>RunBenchmark</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -91,12 +91,9 @@
     <ClCompile Include="Benchmark.cpp" />
     <ClCompile Include="BenchmarkStatistics.cpp" />
     <ClCompile Include="CompressionData.cpp" />
-    <ClCompile Include="LZ4Default.cpp" />
     <ClCompile Include="MemoryUtilities.cpp" />
-    <ClCompile Include="QuickLzLevel3.cpp" />
     <ClCompile Include="RunBenchmark.cpp" />
     <ClCompile Include="Runner.cpp" />
-    <ClCompile Include="SnappyDefault.cpp" />
     <ClCompile Include="ZlibNextGen.cpp" />
     <ClCompile Include="Zstandard.cpp" />
     <ClCompile Include="ZstandardDict.cpp" />
@@ -107,12 +104,9 @@
     <ClInclude Include="BenchmarkStatistics.h" />
     <ClInclude Include="CompressionAlgorithm.h" />
     <ClInclude Include="CompressionData.h" />
-    <ClInclude Include="LZ4Default.h" />
     <ClInclude Include="MeanStdDev.h" />
     <ClInclude Include="MemoryUtilities.h" />
-    <ClInclude Include="QuickLzLevel3.h" />
     <ClInclude Include="Runner.h" />
-    <ClInclude Include="SnappyDefault.h" />
     <ClInclude Include="TimingResult.h" />
     <ClInclude Include="ZlibNextGen.h" />
     <ClInclude Include="Zstandard.h" />
