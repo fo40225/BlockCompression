@@ -4,12 +4,3 @@
 [submodule "zstd"]
 	path = zstd
 	url = https://github.com/MichaelStromberg/zstd.git
-[submodule "lz4"]
-	path = lz4
-	url = https://github.com/MichaelStromberg/lz4.git
-[submodule "snappy"]
-	path = snappy
-	url = https://github.com/MichaelStromberg/snappy.git
-[submodule "quicklz"]
-	path = quicklz
-	url = https://github.com/MichaelStromberg/quicklz.git
