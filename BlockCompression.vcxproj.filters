@@ -21,6 +21,9 @@
     <Filter Include="utilities">
       <UniqueIdentifier>{f0947f96-8490-48d6-98a6-2dc9a8de2dbe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="libdeflate">
+      <UniqueIdentifier>{ed1afd2e-11cd-4488-9559-b62077b34015}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="zlib-ng\adler32.c">
@@ -35,7 +38,7 @@
     <ClCompile Include="zlib-ng\arch\x86\crc_pclmulqdq.c">
       <Filter>zlib-ng</Filter>
     </ClCompile>
-    <ClCompile Include="zlib-ng\crc32.c">
+    <ClCompile Include="zlib-ng\crc32x.c">
       <Filter>zlib-ng</Filter>
     </ClCompile>
     <ClCompile Include="zlib-ng\deflate.c">
@@ -148,6 +151,18 @@
     </ClCompile>
     <ClCompile Include="zstd\lib\common\xxhash.c">
       <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="libdeflate\lib\deflate_compress.c">
+      <Filter>libdeflate</Filter>
+    </ClCompile>
+    <ClCompile Include="libdeflate\lib\deflate_decompress.c">
+      <Filter>libdeflate</Filter>
+    </ClCompile>
+    <ClCompile Include="libdeflate\lib\aligned_malloc.c">
+      <Filter>libdeflate</Filter>
+    </ClCompile>
+    <ClCompile Include="libdeflate\lib\crc32.c">
+      <Filter>libdeflate</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

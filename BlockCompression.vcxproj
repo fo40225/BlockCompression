@@ -11,6 +11,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="libdeflate\lib\aligned_malloc.c">
+      <AdditionalIncludeDirectories>$(ProjectDir)\libdeflate;$(ProjectDir)\libdeflate\lib;$(ProjectDir)\libdeflate\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ANSI_SOURCE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="libdeflate\lib\crc32.c">
+      <AdditionalIncludeDirectories>$(ProjectDir)\libdeflate;$(ProjectDir)\libdeflate\lib;$(ProjectDir)\libdeflate\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ANSI_SOURCE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="libdeflate\lib\deflate_compress.c">
+      <AdditionalIncludeDirectories>$(ProjectDir)\libdeflate;$(ProjectDir)\libdeflate\lib;$(ProjectDir)\libdeflate\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ANSI_SOURCE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="libdeflate\lib\deflate_decompress.c">
+      <AdditionalIncludeDirectories>$(ProjectDir)\libdeflate;$(ProjectDir)\libdeflate\lib;$(ProjectDir)\libdeflate\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ANSI_SOURCE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="utilities\get_library_id.c" />
     <ClCompile Include="zlib-ng\adler32.c">
       <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -44,7 +60,7 @@
       <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="zlib-ng\crc32.c">
+    <ClCompile Include="zlib-ng\crc32x.c">
       <PreprocessorDefinitions>ZLIB_COMPAT;HAVE_BUILTIN_CTZL;MEDIUM_STRATEGY;X86_64;X86_NOCHECK_SSE2;UNALIGNED_OK;UNROLL_LESS;X86_CPUID;X86_SSE2_FILL_WINDOW;X86_SSE4_2_CRC_HASH;X86_PCLMULQDQ_CRC;X86_QUICK_STRATEGY;ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)\zlib-ng;$(ProjectDir)\zlib-ng\arch\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -178,7 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bgzf\bgzf.c">
-      <AdditionalIncludeDirectories>$(ProjectDir)zlib-ng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)zlib-ng;$(ProjectDir)libdeflate;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="bgzf\bgzf.h" />
     <ClInclude Include="utilities\get_library_id.h" />

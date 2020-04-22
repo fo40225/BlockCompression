@@ -20,16 +20,16 @@ vector<CompressionAlgorithm*> GetCompressionAlgorithms(vector<char> dictBuffer) 
 		algorithms.push_back(new ZlibNextGen(cl, BGZF_MAX_BLOCK_SIZE));
 	}
 
-	for (int cl = 1; cl <= 22; cl++) {
-		algorithms.push_back(new Zstandard(cl, SA_BLOCK_SIZE));
-	}
+	//for (int cl = 1; cl <= 22; cl++) {
+	//	algorithms.push_back(new Zstandard(cl, SA_BLOCK_SIZE));
+	//}
 
-	char* pDict  = dictBuffer.data();
-	int dictSize = (int)dictBuffer.size();
+	//char* pDict  = dictBuffer.data();
+	//int dictSize = (int)dictBuffer.size();
 
-	for (int cl = 1; cl <= 22; cl++) {
-		algorithms.push_back(new ZstandardDict(cl, SA_BLOCK_SIZE, pDict, dictSize));
-	}
+	//for (int cl = 1; cl <= 22; cl++) {
+	//	algorithms.push_back(new ZstandardDict(cl, SA_BLOCK_SIZE, pDict, dictSize));
+	//}
 
 	return algorithms;
 }
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 	auto dictBuffer = LoadDictionary(dictPath);
 
 	auto algorithms = GetCompressionAlgorithms(dictBuffer);
-	const int numReplicates = 2;
+	const int numReplicates = 3;
 
 	Runner runner(algorithms, numReplicates);
 	runner.Execute(data);
