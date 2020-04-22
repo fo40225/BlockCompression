@@ -2,8 +2,11 @@
 
 This library contains high-performance versions of the following compression algorithms:
 
-* zlib-ng
-* Zstd
+* libdeflate 1.5
+* zlib-ng (April 8, 2017)
+* zstd 1.3.4
+
+For gzip/deflate-based compression, we use zlib-ng for compression levels 1, 8, and 9. We use libdeflate for all remaining compression levels and for all decompression.
 
 ## Building
 
