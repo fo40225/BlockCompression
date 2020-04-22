@@ -38,7 +38,7 @@ int bgzf_compress(const char* destination, const int destinationLen, const char*
 			printf("destinationLen < 28.\n");
 			return -1;
 		}
-		memcpy(destination, "\037\213\010\4\0\0\0\0\0\377\6\0\102\103\2\0\033\0\3\0\0\0\0\0\0\0\0\0", 28);
+		memcpy((void*)destination, "\037\213\010\4\0\0\0\0\0\377\6\0\102\103\2\0\033\0\3\0\0\0\0\0\0\0\0\0", 28);
 		return 28;
 	}
 
@@ -123,11 +123,10 @@ int bgzf_decompress(const char* destination, const int destinationLen, const cha
 
 	if (!z) {
 		printf("libdeflate_alloc_decompressor failed.\n");
-		exit(1);
 		return -1;
 	}
 
-	int ret = libdeflate_deflate_decompress(z, source + BLOCK_HEADER_LENGTH, sourceLen - BLOCK_HEADER_LENGTH, destination, destinationLen, &numDecompressedBytes);
+	int ret = libdeflate_deflate_decompress(z, source + BLOCK_HEADER_LENGTH, sourceLen - BLOCK_HEADER_LENGTH, (void*)destination, destinationLen, &numDecompressedBytes);
 	libdeflate_free_decompressor(z);
 
 	if (ret != LIBDEFLATE_SUCCESS) {
