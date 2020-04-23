@@ -38,7 +38,7 @@
     <ClCompile Include="zlib-ng\arch\x86\crc_pclmulqdq.c">
       <Filter>zlib-ng</Filter>
     </ClCompile>
-    <ClCompile Include="zlib-ng\crc32x.c">
+    <ClCompile Include="zlib-ng\crc32.c">
       <Filter>zlib-ng</Filter>
     </ClCompile>
     <ClCompile Include="zlib-ng\deflate.c">

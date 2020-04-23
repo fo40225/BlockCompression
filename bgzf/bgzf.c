@@ -2,9 +2,7 @@
 #include <stdint.h>
 #include <zlib.h>
 #include <memory.h>
-
 #include <libdeflate.h>
-#include <stdio.h>
 
 #define BLOCK_HEADER_LENGTH 18
 #define BLOCK_FOOTER_LENGTH 8
@@ -34,10 +32,7 @@ int bgzf_compress(const char* destination, const int destinationLen, const char*
 
 	if (sourceLen == 0) {
 		// EOF block
-		if (destinationLen < 28) {
-			printf("destinationLen < 28.\n");
-			return -1;
-		}
+		if (destinationLen < 28) return -1;
 		memcpy((void*)destination, "\037\213\010\4\0\0\0\0\0\377\6\0\102\103\2\0\033\0\3\0\0\0\0\0\0\0\0\0", 28);
 		return 28;
 	}
@@ -50,21 +45,17 @@ int bgzf_compress(const char* destination, const int destinationLen, const char*
 	// NB levels go up to 12 here.
 	struct libdeflate_compressor* z = libdeflate_alloc_compressor(compressionLevel);
 	
-	if (!z) {
-		printf("libdeflate_alloc_compressor failed.\n");
-		return -2;
-	}
+	if (!z) return -2;
 
 	// Raw deflate
 	size_t clen = libdeflate_deflate_compress(z, source, sourceLen, dst + BLOCK_HEADER_LENGTH, destinationLen - BLOCK_HEADER_LENGTH - BLOCK_FOOTER_LENGTH);
 
 	if (clen <= 0) {
-		printf("libdeflate_deflate_compress failed.\n");
 		libdeflate_free_compressor(z);
 		return -3;
 	}
 
-	numCompressedBytes = clen + BLOCK_HEADER_LENGTH + BLOCK_FOOTER_LENGTH;
+	numCompressedBytes = (int)clen + BLOCK_HEADER_LENGTH + BLOCK_FOOTER_LENGTH;
 
 	libdeflate_free_compressor(z);
 
@@ -120,19 +111,11 @@ int bgzf_decompress(const char* destination, const int destinationLen, const cha
 	size_t numDecompressedBytes;
 
 	struct libdeflate_decompressor* z = libdeflate_alloc_decompressor();
-
-	if (!z) {
-		printf("libdeflate_alloc_decompressor failed.\n");
-		return -1;
-	}
+	if (!z) return -1;
 
 	int ret = libdeflate_deflate_decompress(z, source + BLOCK_HEADER_LENGTH, sourceLen - BLOCK_HEADER_LENGTH, (void*)destination, destinationLen, &numDecompressedBytes);
 	libdeflate_free_decompressor(z);
+	if (ret != LIBDEFLATE_SUCCESS) return -2;
 
-	if (ret != LIBDEFLATE_SUCCESS) {
-		printf("libdeflate_deflate_decompress failed: %d\n", ret);
-		return -2;
-	}
-
-	return numDecompressedBytes;
+	return (int)numDecompressedBytes;
 }
